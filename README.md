@@ -4,6 +4,7 @@ LBReservation is Application for library room reservation in Kasetsart Universit
 After clone this project you have to run this command.
 
     npm install
+    react-native upgrade
     react-native link
 
 Run project 
