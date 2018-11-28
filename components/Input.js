@@ -25,15 +25,15 @@ export default class Input extends Component{
 const styles = StyleSheet.create({
   input:{
     borderRadius:100,
-    paddingLeft:35,
+    paddingLeft:45,
     backgroundColor: 'rgba(52, 52, 52, 0.05)',
     height:35,
   },
   icon:{
     position:'absolute',
-    width:13,
-    height:13,
-    top:11,
+    width:15,
+    height:15,
+    top:10,
     left:15,
   }
 

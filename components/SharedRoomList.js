@@ -21,36 +21,28 @@ export default class SharedRoomList extends Component{
           </TouchableOpacity>
         </View>
         <ScrollView horizontal='true' showsHorizontalScrollIndicator={false} style={{margin:-10,marginLeft:-8}}>
-          <View style={styles.boxShadow}>
-            <View style={styles.boxImage}>
-              <View style={{flex:0.6}}>
-                <Image style={styles.roomImage}
-                source={require('../assets/icons/biggroupstudy01f2.jpg')} />
-              </View>
-              <View style={styles.cardDescription}>
-                <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
-                  <Text style={styles.desText}> ห้องศึกษากลุ่ม ชั้นที่ 2</Text>
-                </Text>
-                <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ : 
-                  <Text style={styles.desText}> 2</Text>
-                </Text>
-                <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ : 
-                  <Text style={styles.desText}> 10</Text>
-                </Text>
-              </View>
-              <View style={{alignItems:'flex-end',justifyContent:'flex-end'}}>
-                <TouchableOpacity style={{position:'absolute'}}>
-                  <View style={{justifyContent:'center',alignItems:'center',width:45,height:20,backgroundColor:'#5AB99C',borderTopLeftRadius:5,borderBottomRightRadius:5}}>
-                    <Text style={styles.tagText}>จองห้อง</Text>
-                  </View>
-                </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.boxShadow}>
+              <View style={styles.boxImage}>
+                <View style={{flex:0.6}}>
+                  <Image style={styles.roomImage}
+                  source={require('../assets/icons/biggroupstudy01f2.jpg')} />
+                </View>
+                <View style={styles.cardDescription}>
+                  <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
+                    <Text style={styles.desText}> ห้องศึกษากลุ่ม ชั้นที่ 2</Text>
+                  </Text>
+                  <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ : 
+                    <Text style={styles.desText}> 2</Text>
+                  </Text>
+                  <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ : 
+                    <Text style={styles.desText}> 10</Text>
+                  </Text>
+                </View>
               </View>
             </View>
-          </View>
-          
+          </TouchableOpacity>   
           <View style={{marginLeft:20}}></View>
-          
-          
         </ScrollView>
       </View>
     );
@@ -76,7 +68,7 @@ const styles = StyleSheet.create({
     borderLeftWidth:7,
     flexDirection:'row',
     height:30,
-    borderColor:'#5AB99C',
+    borderColor:'#6997B9',
     paddingLeft:8,
     justifyContent:'space-between',
     alignItems:'center',
@@ -105,7 +97,7 @@ const styles = StyleSheet.create({
   boxImage : {
     marginTop:15,
     width:145,
-    height:215,
+    height:195,
     borderTopRightRadius: 8,
     borderTopLeftRadius: 8,
     overflow: 'hidden',

@@ -13,7 +13,7 @@ import LinearGradient from 'react-native-linear-gradient';
 export default class NavBar extends Component{
   render(){
     return(
-      <LinearGradient colors={['#6278A5','#475474']}>
+      <LinearGradient colors={['#475474','#6278A5']} useAngle='true'>
         <SafeAreaView>
           <View style={styles.navBar}>
             <View style={{flex:1}}>
