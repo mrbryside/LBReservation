@@ -1,5 +1,5 @@
 # LBReservation
-LBReservation is Application for room reservation in Kasetsart University Sriracha Campus (not for sell)
+LBReservation is Application for library room reservation in Kasetsart University Sriracha Campus (not for sell)
 
 After clone this project you have to run this command.
 
