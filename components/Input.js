@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     paddingLeft:45,
     backgroundColor: 'rgba(52, 52, 52, 0.05)',
     height:35,
+    fontFamily:'Kanit-Regular',
   },
   icon:{
     position:'absolute',

@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Platform,ScrollView, StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import MyText from './MyText';
 
 export default class NavBar extends Component{
   render(){
@@ -21,7 +22,7 @@ export default class NavBar extends Component{
                 <Image style={styles.icon} source={this.props.icon} />
               </TouchableOpacity>
             </View>
-            <Text style={styles.header}>{this.props.header}</Text>
+            <MyText style={{color:'white',fontSize:19,}} text={this.props.header}></MyText>
             <View style={{flex:1}}>
             </View>
           </View>
@@ -46,10 +47,6 @@ const styles = StyleSheet.create({
     marginLeft:30,
     width:23,
     height:23,
-  },
-  header:{
-    color:'white',
-    fontSize:19,
   },
 
 

@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform,ScrollView, StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity} from 'react-native';
+import MyText from './MyText';
 
 
 export default class SharedRoomList extends Component{
@@ -15,33 +16,33 @@ export default class SharedRoomList extends Component{
     return(
       <View>
         <View style={styles.boxHeader}>
-          <Text style={styles.textHeader}>ห้องศึกษากลุ่ม</Text>
+          <MyText style={styles.textHeader} text={'ห้องศึกษากลุ่ม'}></MyText>
           <TouchableOpacity>
-            <Text style={styles.textMore}>เพิ่มเติม</Text>
+            <MyText style={styles.textMore} text={'เพิ่มเติม'}></MyText>
           </TouchableOpacity>
         </View>
         <ScrollView horizontal='true' showsHorizontalScrollIndicator={false} style={{margin:-10,marginLeft:-8}}>
-          <TouchableOpacity>
             <View style={styles.boxShadow}>
-              <View style={styles.boxImage}>
-                <View style={{flex:0.6}}>
-                  <Image style={styles.roomImage}
-                  source={require('../assets/icons/biggroupstudy01f2.jpg')} />
+              <TouchableOpacity>
+                <View style={styles.boxImage}>
+                  <View style={{flex:0.6}}>
+                    <Image style={styles.roomImage}
+                    source={require('../assets/icons/biggroupstudy01f2.jpg')} />
+                  </View>
+                  <View style={styles.cardDescription}>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
+                      <MyText style={styles.desText} text={' ห้องศึกษากลุ่ม ชั้นที่ 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ :
+                      <MyText style={styles.desText} text={' 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ :
+                      <MyText style={styles.desText} text={' 7'}></MyText>
+                    </Text>
+                  </View>
                 </View>
-                <View style={styles.cardDescription}>
-                  <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
-                    <Text style={styles.desText}> ห้องศึกษากลุ่ม ชั้นที่ 2</Text>
-                  </Text>
-                  <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ : 
-                    <Text style={styles.desText}> 2</Text>
-                  </Text>
-                  <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ : 
-                    <Text style={styles.desText}> 10</Text>
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </TouchableOpacity>   
+              </TouchableOpacity> 
+          </View> 
           <View style={{marginLeft:20}}></View>
         </ScrollView>
       </View>
@@ -57,12 +58,15 @@ const styles = StyleSheet.create({
   boldDesText :{
     fontSize:11,
     marginBottom:5,
-    fontWeight:'bold',
+    fontWeight:'500',
     color:'#5C5C5C',
+    fontFamily:'Kanit-Regular'
   },
   desText :{
     fontWeight:'300',
+    fontSize:11,
     color:'#5C5C5C',
+    marginBottom:5,
   },
   boxHeader : {
     borderLeftWidth:7,
@@ -76,12 +80,13 @@ const styles = StyleSheet.create({
   },
   textHeader : {
     fontSize:17,
-    fontWeight:'bold',
+    fontWeight:'400',
     color:'#5C5C5C',
   },
   textMore : {
     fontSize:11,
     color:'#5C5C5C',
+    fontWeight:'400',
   },
   tagText :{
     fontSize:10,

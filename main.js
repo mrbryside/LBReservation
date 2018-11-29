@@ -11,6 +11,7 @@ import SharedRoomList from './components/SharedRoomList';
 import NavBar from './components/NavBar';
 import Input from './components/Input';
 import NewList from './components/NewList'
+import MyText from './components/MyText';
 import {Platform,ScrollView, StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity} from 'react-native';
 
 export default class main extends Component{
