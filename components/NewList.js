@@ -1,14 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, { Component } from 'react';
 import { Platform, ScrollView, StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity } from 'react-native';
 import MyText from './MyText';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export default class NewList extends Component {
   render() {
@@ -17,12 +10,14 @@ export default class NewList extends Component {
         <View style={styles.boxHeader}>
         <MyText style={styles.textHeader} text={'ประกาศ'}></MyText>
           <TouchableOpacity>
-            <MyText style={styles.textMore} text={'เพิ่มเติม'}></MyText>
+            <View style={{flexDirection:'row'}}>
+              <MyText style={styles.textMore} text={'เพิ่มเติม'}></MyText>
+              <Icon style={{top:2,marginLeft:2}} name="chevron-right" color={'#5C5C5C'} size={13}/>
+            </View>
           </TouchableOpacity>
         </View>
         <ScrollView horizontal='true' showsHorizontalScrollIndicator={false} style={{ margin: -10, marginLeft: -8 }}>
           <View style={styles.boxShadow}>
-            <TouchableOpacity>
               <View style={styles.boxImage}>
                 <View style={{ flex: 0.48 }}>
                   <Image style={styles.roomImage}
@@ -40,7 +35,120 @@ export default class NewList extends Component {
                   </TouchableOpacity>
                 </View>
               </View>
-            </TouchableOpacity>
+          </View>
+          <View style={styles.boxShadow}>
+              <View style={styles.boxImage}>
+                <View style={{ flex: 0.48 }}>
+                  <Image style={styles.roomImage}
+                    source={require('../assets/icons/ข้อปฏบัติการจองห้อง.jpg')} />
+                </View>
+                <View style={styles.cardDescription}>
+                  <MyText line={1} style={styles.boldDesText} text={'ประกาศวันทำการห้องสมุด'}></MyText>
+                  <MyText line={3} style={styles.desText} text={'ห้องสมุดจะทำการในวันที่ 21 นี้ และปิดให้บริการทุกวันอาทิตย์ เป็นต้นไป'}></MyText>
+                </View>
+                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                  <TouchableOpacity style={{ position: 'absolute' }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', width: 45, height: 20, backgroundColor: '#5AB99C', borderTopLeftRadius: 5 }}>
+                      <MyText style={styles.tagText} text={'อ่านต่อ'}></MyText>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
+          </View>
+          <View style={styles.boxShadow}>
+              <View style={styles.boxImage}>
+                <View style={{ flex: 0.48 }}>
+                  <Image style={styles.roomImage}
+                    source={require('../assets/icons/ตรวจสอบอีเมล์.jpg')} />
+                </View>
+                <View style={styles.cardDescription}>
+                  <MyText line={1} style={styles.boldDesText} text={'ประกาศวันทำการห้องสมุด'}></MyText>
+                  <MyText line={3} style={styles.desText} text={'ห้องสมุดจะทำการในวันที่ 21 นี้ และปิดให้บริการทุกวันอาทิตย์ เป็นต้นไป'}></MyText>
+                </View>
+                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                  <TouchableOpacity style={{ position: 'absolute' }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', width: 45, height: 20, backgroundColor: '#5AB99C', borderTopLeftRadius: 5 }}>
+                      <MyText style={styles.tagText} text={'อ่านต่อ'}></MyText>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
+          </View>
+          <View style={styles.boxShadow}>
+              <View style={styles.boxImage}>
+                <View style={{ flex: 0.48 }}>
+                  <Image style={styles.roomImage}
+                    source={require('../assets/icons/ข้อปฏบัติการจองห้อง.jpg')} />
+                </View>
+                <View style={styles.cardDescription}>
+                  <MyText line={1} style={styles.boldDesText} text={'ประกาศวันทำการห้องสมุด'}></MyText>
+                  <MyText line={3} style={styles.desText} text={'ห้องสมุดจะทำการในวันที่ 21 นี้ และปิดให้บริการทุกวันอาทิตย์ เป็นต้นไป'}></MyText>
+                </View>
+                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                  <TouchableOpacity style={{ position: 'absolute' }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', width: 45, height: 20, backgroundColor: '#5AB99C', borderTopLeftRadius: 5 }}>
+                      <MyText style={styles.tagText} text={'อ่านต่อ'}></MyText>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
+          </View>
+          <View style={styles.boxShadow}>
+              <View style={styles.boxImage}>
+                <View style={{ flex: 0.48 }}>
+                  <Image style={styles.roomImage}
+                    source={require('../assets/icons/ตรวจสอบอีเมล์.jpg')} />
+                </View>
+                <View style={styles.cardDescription}>
+                  <MyText line={1} style={styles.boldDesText} text={'ประกาศวันทำการห้องสมุด'}></MyText>
+                  <MyText line={3} style={styles.desText} text={'ห้องสมุดจะทำการในวันที่ 21 นี้ และปิดให้บริการทุกวันอาทิตย์ เป็นต้นไป'}></MyText>
+                </View>
+                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                  <TouchableOpacity style={{ position: 'absolute' }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', width: 45, height: 20, backgroundColor: '#5AB99C', borderTopLeftRadius: 5 }}>
+                      <MyText style={styles.tagText} text={'อ่านต่อ'}></MyText>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
+          </View>
+          <View style={styles.boxShadow}>
+              <View style={styles.boxImage}>
+                <View style={{ flex: 0.48 }}>
+                  <Image style={styles.roomImage}
+                    source={require('../assets/icons/ข้อปฏบัติการจองห้อง.jpg')} />
+                </View>
+                <View style={styles.cardDescription}>
+                  <MyText line={1} style={styles.boldDesText} text={'ประกาศวันทำการห้องสมุด'}></MyText>
+                  <MyText line={3} style={styles.desText} text={'ห้องสมุดจะทำการในวันที่ 21 นี้ และปิดให้บริการทุกวันอาทิตย์ เป็นต้นไป'}></MyText>
+                </View>
+                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                  <TouchableOpacity style={{ position: 'absolute' }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', width: 45, height: 20, backgroundColor: '#5AB99C', borderTopLeftRadius: 5 }}>
+                      <MyText style={styles.tagText} text={'อ่านต่อ'}></MyText>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
+          </View>
+          <View style={styles.boxShadow}>
+              <View style={styles.boxImage}>
+                <View style={{ flex: 0.48 }}>
+                  <Image style={styles.roomImage}
+                    source={require('../assets/icons/ตรวจสอบอีเมล์.jpg')} />
+                </View>
+                <View style={styles.cardDescription}>
+                  <MyText line={1} style={styles.boldDesText} text={'ประกาศวันทำการห้องสมุด'}></MyText>
+                  <MyText line={3} style={styles.desText} text={'ห้องสมุดจะทำการในวันที่ 21 นี้ และปิดให้บริการทุกวันอาทิตย์ เป็นต้นไป'}></MyText>
+                </View>
+                <View style={{ alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+                  <TouchableOpacity style={{ position: 'absolute' }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', width: 45, height: 20, backgroundColor: '#5AB99C', borderTopLeftRadius: 5 }}>
+                      <MyText style={styles.tagText} text={'อ่านต่อ'}></MyText>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
           </View>
 
           <View style={{ marginLeft: 20 }}></View>

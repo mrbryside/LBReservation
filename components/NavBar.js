@@ -1,15 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
 import {Platform,ScrollView, StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import MyText from './MyText';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export default class NavBar extends Component{
   render(){
@@ -23,7 +16,10 @@ export default class NavBar extends Component{
               </TouchableOpacity>
             </View>
             <MyText style={{color:'white',fontSize:19,}} text={this.props.header}></MyText>
-            <View style={{flex:1}}>
+            <View style={{flex:1,alignItems:'flex-end'}}>
+              <TouchableOpacity>
+                <Icon style={styles.iconRight} name="bell" color={'white'} size={23}/>
+              </TouchableOpacity>
             </View>
           </View>
         </SafeAreaView>
@@ -47,6 +43,9 @@ const styles = StyleSheet.create({
     marginLeft:30,
     width:23,
     height:23,
+  },
+  iconRight:{
+    marginRight:30,
   },
 
 

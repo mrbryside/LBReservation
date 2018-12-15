@@ -1,14 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
 import {Platform,ScrollView, StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity} from 'react-native';
 import MyText from './MyText';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
 export default class SharedRoomList extends Component{
@@ -18,12 +11,53 @@ export default class SharedRoomList extends Component{
         <View style={styles.boxHeader}>
           <MyText style={styles.textHeader} text={'ห้องศึกษากลุ่ม'}></MyText>
           <TouchableOpacity>
-            <MyText style={styles.textMore} text={'เพิ่มเติม'}></MyText>
+            <View style={{flexDirection:'row'}}>
+              <MyText style={styles.textMore} text={'เพิ่มเติม'}></MyText>
+              <Icon style={{top:2,marginLeft:2}} name="chevron-right" color={'#5C5C5C'} size={13}/>
+            </View>
           </TouchableOpacity>
+                  
         </View>
         <ScrollView horizontal='true' showsHorizontalScrollIndicator={false} style={{margin:-10,marginLeft:-8}}>
             <View style={styles.boxShadow}>
-              <TouchableOpacity>
+                <View style={styles.boxImage}>
+                  <View style={{flex:0.6}}>
+                    <Image style={styles.roomImage}
+                    source={require('../assets/icons/newminitheater.jpg')} />
+                  </View>
+                  <View style={styles.cardDescription}>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
+                      <MyText style={styles.desText} text={' ห้องศึกษากลุ่ม ชั้นที่ 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ :
+                      <MyText style={styles.desText} text={' 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ :
+                      <MyText style={styles.desText} text={' 7'}></MyText>
+                    </Text>
+                  </View>
+                </View>
+          </View> 
+          <View style={styles.boxShadow}>
+                <View style={styles.boxImage}>
+                  <View style={{flex:0.6}}>
+                    <Image style={styles.roomImage}
+                    source={require('../assets/icons/biggroupstudy02f2.jpg')} />
+                  </View>
+                  <View style={styles.cardDescription}>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
+                      <MyText style={styles.desText} text={' ห้องศึกษากลุ่ม ชั้นที่ 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ :
+                      <MyText style={styles.desText} text={' 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ :
+                      <MyText style={styles.desText} text={' 7'}></MyText>
+                    </Text>
+                  </View>
+                </View>
+          </View>
+          <View style={styles.boxShadow}>
                 <View style={styles.boxImage}>
                   <View style={{flex:0.6}}>
                     <Image style={styles.roomImage}
@@ -41,8 +75,83 @@ export default class SharedRoomList extends Component{
                     </Text>
                   </View>
                 </View>
-              </TouchableOpacity> 
-          </View> 
+          </View>
+          <View style={styles.boxShadow}>
+                <View style={styles.boxImage}>
+                  <View style={{flex:0.6}}>
+                    <Image style={styles.roomImage}
+                    source={require('../assets/icons/newminitheater.jpg')} />
+                  </View>
+                  <View style={styles.cardDescription}>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
+                      <MyText style={styles.desText} text={' ห้องศึกษากลุ่ม ชั้นที่ 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ :
+                      <MyText style={styles.desText} text={' 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ :
+                      <MyText style={styles.desText} text={' 7'}></MyText>
+                    </Text>
+                  </View>
+                </View> 
+          </View>
+          <View style={styles.boxShadow}>
+                <View style={styles.boxImage}>
+                  <View style={{flex:0.6}}>
+                    <Image style={styles.roomImage}
+                    source={require('../assets/icons/biggroupstudy02f2.jpg')} />
+                  </View>
+                  <View style={styles.cardDescription}>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
+                      <MyText style={styles.desText} text={' ห้องศึกษากลุ่ม ชั้นที่ 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ :
+                      <MyText style={styles.desText} text={' 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ :
+                      <MyText style={styles.desText} text={' 7'}></MyText>
+                    </Text>
+                  </View>
+                </View>
+          </View>
+          <View style={styles.boxShadow}>
+                <View style={styles.boxImage}>
+                  <View style={{flex:0.6}}>
+                    <Image style={styles.roomImage}
+                    source={require('../assets/icons/newminitheater.jpg')} />
+                  </View>
+                  <View style={styles.cardDescription}>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
+                      <MyText style={styles.desText} text={' ห้องศึกษากลุ่ม ชั้นที่ 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ :
+                      <MyText style={styles.desText} text={' 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ :
+                      <MyText style={styles.desText} text={' 7'}></MyText>
+                    </Text>
+                  </View>
+                </View> 
+          </View>
+          <View style={styles.boxShadow}>
+                <View style={styles.boxImage}>
+                  <View style={{flex:0.6}}>
+                    <Image style={styles.roomImage}
+                    source={require('../assets/icons/biggroupstudy01f2.jpg')} />
+                  </View>
+                  <View style={styles.cardDescription}>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชื่อ :  
+                      <MyText style={styles.desText} text={' ห้องศึกษากลุ่ม ชั้นที่ 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ชั้นที่ :
+                      <MyText style={styles.desText} text={' 2'}></MyText>
+                    </Text>
+                    <Text numberOfLines={1} style={styles.boldDesText}>ความจุขั้นต่ำ :
+                      <MyText style={styles.desText} text={' 7'}></MyText>
+                    </Text>
+                  </View>
+                </View> 
+          </View>
           <View style={{marginLeft:20}}></View>
         </ScrollView>
       </View>
@@ -76,7 +185,7 @@ const styles = StyleSheet.create({
     paddingLeft:8,
     justifyContent:'space-between',
     alignItems:'center',
-    paddingRight:20,
+    paddingRight:15,
   },
   textHeader : {
     fontSize:17,

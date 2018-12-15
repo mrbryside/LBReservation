@@ -7,11 +7,10 @@
  */
 
 import React, {Component} from 'react';
-import SharedRoomList from './components/SharedRoomList';
-import NavBar from './components/NavBar';
-import Input from './components/Input';
-import NewList from './components/NewList'
-import MyText from './components/MyText';
+import SharedRoomList from '../components/SharedRoomList';
+import NavBar from '../components/NavBar';
+import Input from '../components/Input';
+import NewList from '../components/NewList'
 import {Platform,ScrollView, StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity} from 'react-native';
 
 export default class main extends Component{
@@ -19,19 +18,19 @@ export default class main extends Component{
     return(
       <View style={styles.parent}>
           <NavBar header={'LBReservation'} 
-          icon={require('./assets/icons/round-account-button-with-user-inside.png')}>
+          icon={require('../assets/icons/round-account-button-with-user-inside.png')}>
           </NavBar>
           <View style={styles.body}>
             <ScrollView>
               <View style={styles.topSearch}>
                 <View style={{flex:0.9}}>
                   <Input placeHolder={'ชื่อห้อง/ความจุห้อง'} 
-                  icon={require('./assets/icons/search.png')}/>
+                  icon={require('../assets/icons/search.png')}/>
                 </View>
                 <View style={styles.listIcon}>
                   <TouchableOpacity>
                     <Image style={styles.icon} 
-                    source={require('./assets/icons/list.png')} />
+                    source={require('../assets/icons/list.png')} />
                   </TouchableOpacity>
                 </View>
               </View>
@@ -45,8 +44,6 @@ export default class main extends Component{
               <View style={styles.divider}></View>
             </ScrollView>
           </View>
-          <SafeAreaView style={styles.safeAreaBottom}>
-          </SafeAreaView>
       </View>
         
 
@@ -56,12 +53,13 @@ export default class main extends Component{
 }
 
 
+
 const styles = StyleSheet.create({
   safeAreaTop:{
     backgroundColor:'#5AB99C',
   },
   safeAreaBottom:{
-    backgroundColor:'#FAFAFA',
+    backgroundColor:'red',
   },
   parent: {
     flex:1,
